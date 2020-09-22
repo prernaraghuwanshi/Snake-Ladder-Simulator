@@ -26,8 +26,10 @@ public class SnakeAndLadder{
 				//Snake
 				positionPlayer1 -= die;
 			}
-			if(positionPlayer1< 0)
+			if(positionPlayer1 < 0)
 				positionPlayer1 = 0;
+			if(positionPlayer1 > 100)
+				positionPlayer1 -= die;
 			System.out.println("Current Position: "+positionPlayer1);
 		}
 	}
