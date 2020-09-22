@@ -4,10 +4,12 @@ public class SnakeAndLadder{
 		int START = 0;
 		int END = 100;
 		int positionPlayer1 = 0;
+		int numberOfDiceRolls = 0;
 		System.out.println("Welcome to Snake and Ladder Simulator!");
 		while(positionPlayer1 != 100)
 		{
 			int die = (int) (Math.random()*6) + 1; 
+			numberOfDiceRolls++;
 			System.out.println("Dice Roll: " + die);
 
 			int option = (int) Math.floor(Math.random() * 10) % 3;
@@ -32,6 +34,7 @@ public class SnakeAndLadder{
 				positionPlayer1 -= die;
 			System.out.println("Current Position: "+positionPlayer1);
 		}
+		System.out.println("Total number of Dice Rolls: " + numberOfDiceRolls);
 	}
 
 
